@@ -31,6 +31,7 @@ Save cleaned data to `./processed_data/`:
 - **`order_products_combined.csv`**: Combined data for basket analysis.
 
 This preprocessing ensures clean, multi-item basket data ready for Association Rule Mining in subsequent tasks.
+
 --------------------------------------------------------------------------------------------------------------
 
 ## TASK II: Basket Encoding for Association Rule Mining
@@ -56,6 +57,7 @@ Group products by order ID to form shopping baskets:
 ### **Step 4: Saving the Encoded Matrix**
 - Save the final binary matrix as `basket_encoded.csv` for use in subsequent association rule mining tasks. This matrix optimizes memory usage and computational efficiency for the Apriori algorithm.
 - This encoding step transforms raw transactional data into a structured format ready for frequent itemset mining and association rule generation.
+
 --------------------------------------------------------------------------------------------------------------
 
 ## TASK III: Frequent Itemset Mining with Apriori Algorithm
@@ -78,6 +80,8 @@ Based on analysis, select min_support = 0.025 as optimal balance point:
 1. **59 frequent itemsets** identified
 2. **Size distribution**: 54 single-item sets (91.5%) + 5 two-item sets (8.5%)
 3. **Top performers**: Product_24852 (20.94% support), Product_13176 (17.01%), Product_21137 (12.43%)
+
+--------------------------------------------------------------------------------------------------------------
 
 ### **Step 4: Results Storage**
 - Save complete frequent itemsets to `frequent_itemsets_0025.csv` for use in association rule generation. This dataset forms the foundation for deriving meaningful product association rules in Task 4.
