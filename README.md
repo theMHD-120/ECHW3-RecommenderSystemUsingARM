@@ -75,7 +75,7 @@ Generate comparative visualizations:
 - **Total Itemsets vs Minimum Support**: Inverse relationship showing exponential growth in itemset count as support decreases.
 - **Maximum Itemset Size vs Minimum Support**: Step function revealing the support threshold (0.03) where 2-item sets emerge.
 
-![min support vs frequent itemset size plots](apriori_comparison.png)
+![min support vs frequent itemset size plots](results/apriori_comparison.png)
 
 ### **Step 3: Optimal Parameter Selection**
 Based on analysis, select min_support = 0.025 as optimal balance point:
