@@ -1,5 +1,5 @@
 ### in the name of Allah
-# Shopping Basket Analysis and Recommender System based on ARM (Association Rule Mining)
+# ECHW3-RecommenderSystemUsingARM
 ------------------
 ## TASK I: Data Preprocessing
 
