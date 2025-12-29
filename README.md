@@ -81,9 +81,39 @@ Based on analysis, select min_support = 0.025 as optimal balance point:
 2. **Size distribution**: 54 single-item sets (91.5%) + 5 two-item sets (8.5%)
 3. **Top performers**: Product_24852 (20.94% support), Product_13176 (17.01%), Product_21137 (12.43%)
 
---------------------------------------------------------------------------------------------------------------
-
 ### **Step 4: Results Storage**
 - Save complete frequent itemsets to `frequent_itemsets_0025.csv` for use in association rule generation. This dataset forms the foundation for deriving meaningful product association rules in Task 4.
 - This systematic parameter exploration ensures robust selection of mining parameters, balancing computational efficiency with comprehensive pattern discovery for actionable business insights.
 --------------------------------------------------------------------------------------------------------------
+
+## TASK IV: Association Rule Mining and Analysis
+
+This task generates and analyzes association rules from the frequent itemsets discovered in Task 3. Using the mlxtend library's `association_rules` function, we extract meaningful relationships between products and evaluate them using key metrics including support, confidence, and lift. The analysis identifies the strongest product associations for actionable business recommendations.
+
+### **Step 1: Loading Frequent Itemsets**
+Load the precomputed frequent itemsets from Task 3:
+- `frequent_itemsets_0025.csv`: Contains 59 frequent itemsets with min_support=0.025.
+- Convert string representations of itemsets back to Python sets for rule generation.
+- Itemset size ranges from 1 to 2, enabling discovery of pairwise product relationships.
+
+### **Step 2: Generating and Analyzing Association Rules**
+Apply the association rules algorithm with minimum confidence threshold of 0.1:
+- **10 association rules** generated from the frequent itemsets.
+- **All rules have lift > 1**, indicating positive relationships between products.
+- **Support range**: 0.0251 to 0.0302 (2.5% to 3% of transactions).
+- **Confidence range**: 0.1197 to 0.3059 (12% to 31% prediction accuracy).
+- **Average lift:**: 1.358, showing moderate to strong associations.
+
+### **Step 3: Identifying Top Rules by Lift**
+Extract the three strongest association rules based on lift value:
+1. **Product_13176 → Product_47209** (Lift: 1.7398, Confidence: 17.13%, Support: 2.91%)
+2. **Product_47209 → Product_13176** (Lift: 1.7398, Confidence: 29.59%, Support: 2.91%)
+3. **Product_47766 → Product_24852** (Lift: 1.4604, Confidence: 30.59%, Support: 2.51%)
+
+### **Step 4: Saving Results and Final Summary**
+Save the complete analysis for business implementation:
+- `association_rules.csv`: All 10 generated rules with full metrics.
+- `top_3_rules_by_lift.csv`: Filtered set of strongest rules for immediate action.
+- **Key insight**: The bidirectional relationship between Product_13176 and Product_47209 represents the strongest association in the dataset.
+
+This association rule mining provides actionable insights for product placement, promotional bundling, and cross-selling strategies, enabling data-driven decision making for retail optimization.
