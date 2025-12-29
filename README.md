@@ -74,6 +74,7 @@ Execute Apriori algorithm across multiple minimum support values (0.05 to 0.01) 
 Generate comparative visualizations:
 - **Total Itemsets vs Minimum Support**: Inverse relationship showing exponential growth in itemset count as support decreases.
 - **Maximum Itemset Size vs Minimum Support**: Step function revealing the support threshold (0.03) where 2-item sets emerge.
+
 ![min support vs frequent itemset size plots](apriori_comparison.png)
 
 ### **Step 3: Optimal Parameter Selection**
