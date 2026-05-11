@@ -2,6 +2,7 @@
 # ECHW3-RecommenderSystemUsingARM
 >>> Electronic Commerce - Winter 2025
 
+--------------------------------------------------------------------------------------------------------------
 ## TASK I: Data Preprocessing
 
 This task focuses on preparing the Instacart e-commerce dataset for Association Rule Mining analysis. The preprocessing pipeline ensures data quality and creates a manageable subset for efficient pattern mining. We address common data issues including missing values and irrelevant transactions, while focusing on multi-item baskets essential for meaningful association rule discovery. By sampling 20,000 users, we balance computational feasibility with sufficient data coverage for robust analysis.
