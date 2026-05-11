@@ -1,6 +1,6 @@
 ### in the name of Allah
 # ECHW3-RecommenderSystemUsingARM
->>> E-Commerce Winter 2025
+>>> Electronic Commerce - Winter2025
 
 ## TASK I: Data Preprocessing
 
